@@ -1,22 +1,33 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+* {
   margin: 0;
-  background: #f7f9fc;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  align-items: center;
+  padding: 18px 60px;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+nav h2 {
+  font-size: 22px;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  list-style: none;
+  gap: 25px;
 }
 
 nav a {
@@ -25,37 +36,77 @@ nav a {
   font-weight: 500;
 }
 
+nav a:hover {
+  color: #5b7cfa;
+}
+
+/* HERO SECTION */
 .hero {
-  padding: 80px 40px;
-  text-align: center;
-  background: linear-gradient(135deg,#6a85b6,#bac8e0);
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #5b7cfa, #8fa8ff);
   color: white;
 }
 
-.btn {
-  background: white;
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
+.hero h1 {
+  font-size: 46px;
+  max-width: 900px;
+  margin-bottom: 15px;
 }
 
-.page {
-  padding: 60px 40px;
-  max-width: 900px;
-  margin: auto;
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+  width: fit-content;
+  background: white;
+  color: #333;
+  padding: 12px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* HIGHLIGHTS */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 60px;
 }
 
 .card {
   background: white;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-weight: 500;
 }
 
+/* PAGE CONTENT */
+.page {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.page h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
+  background: #ffffff;
   font-size: 14px;
+  margin-top: 40px;
 }
